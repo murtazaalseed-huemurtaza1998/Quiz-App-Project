@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App Pro - Elzero Updated</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-app">
+    <div class="start-screen" id="startScreen">
+      <h1>Quiz App Pro</h1>
+      <p>اختبر معلوماتك</p>
+      <button id="musicBtn">🔊 تشغيل الموسيقى</button>
+      <div class="difficulty">
+        <button data-level="easy">سهل</button>
+        <button data-level="medium">متوسط</button>
+        <button data-level="hard">صعب</button>
+      </div>
+      <div class="highscore">اعلى نتيجة: <span id="highscore">0</span></div>
+    </div>
+
+    <div class="quiz-area" id="quizArea" style="display: none;">
+      <div class="quiz-info">
+        <div class="category">الفئة: <span id="categoryName">جاري التحميل...</span></div>
+        <div class="count">السؤال <span id="qCount"></span> من <span id="qTotal"></span></div>
+      </div>
+
+      <div class="timer">
+        <div class="time-bar" id="timeBar"></div>
+        <span id="timeLeft">15</span> ثانية
+      </div>
+
+      <h2 class="question" id="question"></h2>
+      <div class="answers" id="answers"></div>
+      <button class="submit-btn" id="submitBtn">تأكيد الاجابة</button>
+      <div class="bullets" id="bullets"></div>
+    </div>
+
+    <div class="result-screen" id="resultScreen" style="display: none;">
+      <h2 id="resultTitle"></h2>
+      <p id="resultScore"></p>
+      <button id="restartBtn">اعادة اللعب</button>
+    </div>
+  </div>
+
+  <!-- ملفات الصوت -->
+  <audio id="bgMusic" loop src="https://cdn.pixabay.com/audio/2025/08/21/audio_7e5e3b1e9b.mp3"></audio>
+  <audio id="correctSound" src="https://cdn.pixabay.com/audio/2025/04/23/audio_1b7f8c9a1a.mp3"></audio>
+  <audio id="wrongSound" src="https://cdn.pixabay.com/audio/2025/01/12/audio_3c4d5e6f7g.mp3"></audio>
+
+  <script src="main.js"></script>
+</body>
+</html>
